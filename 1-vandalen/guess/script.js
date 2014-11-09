@@ -19,9 +19,10 @@ window.onload = function(){
 			
 		// Plats för förändring.
 
-
-		// Returnera exempelvis: 
-		// [true, "Grattis du vann! Det hemliga talet var X och du behövde Y gissningar för att hitta det."]
+		if(number === secret)
+		{
+		return [true, "Grattis du vann! Det hemliga talet var X och du behövde Y gissningar för att hitta det."]
+		}
 		// [false, "Det hemliga talet är högre!"]
 		// [false, "Det hemliga talet är lägre!"]
 		// [false, "Talet är utanför intervallet 0 - 100"]		

@@ -2,7 +2,14 @@
 
 window.onload = function(){
 	
-	var secret = 50; // Detta tal behöver bytas ut mot ett slumpat tal.
+	var secret = getRandomArbitrary(0,51); // Detta tal behöver bytas ut mot ett slumpat tal.
+	
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+	// Returns a random number between min (inclusive) and max (exclusive)
+	function getRandomArbitrary(min, max) {
+	return Math.random() * (max - min) + min;
+	}
+	
 	
 	// I denna funktion ska du skriva koden för att hantera "spelet"
 	var guess = function(number){

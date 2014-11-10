@@ -6,17 +6,24 @@ window.onload = function(){
 	
 	// yyyy-mm-dd
 	var re = /^(\d{4})([\/-])(\d{1,2})\2(\d{1,2})$/ ; 
-	console.log(re.test(date)); 
 	
-	var nextBirthDay = new Date(date);
-	var now = new Date();
-	nextBirthDay.setYear(now.getFullYear());
+	if(re.test(date))
+	{
+		var nextBirthDay = new Date(date);
+		var now = new Date();
+		nextBirthDay.setYear(now.getFullYear());
 
-	//Differans i millisekinder från årets födelsdag vs nuvarande datum
-	var milliSeconds = nextBirthDay - now;
+		//Differans i millisekinder från årets födelsdag vs nuvarande datum
+		var milliSeconds = nextBirthDay - now;
 	
-	//Konvertera millisekunder till avrundade dagar
-	var days = Math.ceil(milliSeconds / (1000*60*60*24));
+		//Konvertera millisekunder till avrundade dagar
+		var days = Math.ceil(milliSeconds / (1000*60*60*24));
+	}
+	else
+	{
+		throw new Error ("Fel datumformat, Försök igen!")
+	}
+	
 	
 	return days;
 

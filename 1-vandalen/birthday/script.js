@@ -5,9 +5,9 @@ window.onload = function(){
 	
 	var birthday = function(date){
 		
-
-
-			// Din kod här.
+	var now = new Date();
+	
+	var birthDay = date;
 
 
 

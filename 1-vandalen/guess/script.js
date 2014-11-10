@@ -4,8 +4,13 @@ window.onload = function(){
 	
 	var min = 0;
 	var max = 101;
+	var guesses = 0;
 	
-	var secret = getRandomInt(min,(max + 1)); // Detta tal behöver bytas ut mot ett slumpat tal.
+	function incrementNrOfGuesses(){
+		guesses += 1;
+	}
+	
+	var secret = getRandomInt(min,max); // Detta tal behöver bytas ut mot ett slumpat tal.
 	
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 	// Returns a random integer between min (included) and max (excluded)
@@ -25,15 +30,18 @@ window.onload = function(){
 		{
 			if(number == secret)
 			{
-				return [true, "Grattis du vann! Det hemliga talet var " + secret + " och du behövde Y gissningar för att hitta det."];
+				incrementNrOfGuesses();
+				return [true, "Grattis du vann! Det hemliga talet var " + secret + " och du behövde " + guesses + " gissningar för att hitta det."];
 			}
 			else if(number < secret && number >= min)
 			{
+				incrementNrOfGuesses();
 				return [false, "Det hemliga talet är högre!"];	
 			}
 			else if(number > secret && number < max)
 			{ 
-				return [false, "Det hemliga talet är lägre!"];	
+				incrementNrOfGuesses();
+				return [false, "Det hemliga talet är lägre!"];
 			}
 			else
 			{
@@ -44,9 +52,6 @@ window.onload = function(){
 		{
 			throw "Du måste ange talet med siffror!";	
 		}	
-			
-	
-		
 	};
 	
 	// ------------------------------------------------------------------------------

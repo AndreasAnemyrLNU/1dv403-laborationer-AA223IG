@@ -2,7 +2,10 @@
 
 window.onload = function(){
 	
-	var secret = getRandomInt(0,51); // Detta tal behöver bytas ut mot ett slumpat tal.
+	var min = 0;
+	var max = 101;
+	
+	var secret = getRandomInt(min,(max + 1)); // Detta tal behöver bytas ut mot ett slumpat tal.
 	
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 	// Returns a random integer between min (included) and max (excluded)
@@ -19,17 +22,22 @@ window.onload = function(){
 			
 		// Plats för förändring.
 
-		if(number === secret)
+		if(number == secret)
 		{
 			return [true, "Grattis du vann! Det hemliga talet var " + secret + " och du behövde Y gissningar för att hitta det."];
 		}
-		else if(number < secret)
+		else if(number < secret && number >= min)
 		{
 			return [false, "Det hemliga talet är högre!"];	
 		}
-
-		// [false, "Det hemliga talet är lägre!"]
-		// [false, "Talet är utanför intervallet 0 - 100"]		
+		else if(number > secret && number < max)
+		{
+			return [false, "Det hemliga talet är lägre!"];	
+		}
+		else
+		{
+			return [false, "Talet är utanför intervallet " + min + "-" + max];
+		}
 	};
 	
 	// ------------------------------------------------------------------------------
@@ -45,7 +53,7 @@ window.onload = function(){
 	submit.addEventListener("click", function(e){
 		e.preventDefault(); // Hindra formuläret från att skickas till servern. Vi hanterar allt på klienten.
 
-		var answer = guess(input.value) // Läser in talet från textrutan och skickar till funktionen "guess"
+		var answer = guess(input.value); // Läser in talet från textrutan och skickar till funktionen "guess"
 		p.innerHTML = answer[1];		// Skriver ut texten från arrayen som skapats i funktionen.	
 
 		if(answer[0] === true){				// Om spelet är slut, avaktivera knappen.

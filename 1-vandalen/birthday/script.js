@@ -11,7 +11,14 @@ window.onload = function(){
 	{
 		var nextBirthDay = new Date(date);
 		var now = new Date();
+		
 		nextBirthDay.setYear(now.getFullYear());
+		
+		//if present birthday passed current year
+		if(nextBirthDay < now)
+		{
+			nextBirthDay.setYear(now.getFullYear() + 1);
+		}
 
 		//Differans i millisekinder från årets födelsdag vs nuvarande datum
 		var milliSeconds = nextBirthDay - now;

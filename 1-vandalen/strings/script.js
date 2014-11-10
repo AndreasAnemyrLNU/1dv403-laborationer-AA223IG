@@ -8,10 +8,12 @@ window.onload = function(){
 		// Returnera den konverterade strängen.
 		// Vid fel, kasta ett undantag med ett meddelande till användaren. 
 
-		if(str === undefined)
+		if(str === "")
 		{
-			throw "Du glömde att mata in en textsträng!";
+			throw new Error ("Du glömde att mata in en textsträng!");
 		}
+		
+		console.log(str);
 		
 		var newStr = "";
 		

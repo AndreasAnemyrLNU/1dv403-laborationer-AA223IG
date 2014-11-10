@@ -3,14 +3,15 @@
 window.onload = function(){
 
 	
+	
 	var birthday = function(date){
 		
-	var now = new Date();
 	
-	var birthDay = date;
-
-
-
+	
+	var nextBirthDay = new Date(date);
+	nextBirthDay.setYear(2014);
+	
+	console.log(nextBirthDay.getFullYear());
 
 	};
 	// ------------------------------------------------------------------------------

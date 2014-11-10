@@ -20,24 +20,33 @@ window.onload = function(){
 		console.log("Det hemliga talet: " + secret); // Du når den yttre variabeln secret innifrån funktionen.
 		console.log("Du gissade: " + number); // Detta nummer är det som användaren gissade på.
 			
-		// Plats för förändring.
-
-		if(number == secret)
+		//Kasta fel om inmatat värde inte kan tolkas som tal
+		if( !isNaN (number))
 		{
-			return [true, "Grattis du vann! Det hemliga talet var " + secret + " och du behövde Y gissningar för att hitta det."];
-		}
-		else if(number < secret && number >= min)
-		{
-			return [false, "Det hemliga talet är högre!"];	
-		}
-		else if(number > secret && number < max)
-		{
-			return [false, "Det hemliga talet är lägre!"];	
+			if(number == secret)
+			{
+				return [true, "Grattis du vann! Det hemliga talet var " + secret + " och du behövde Y gissningar för att hitta det."];
+			}
+			else if(number < secret && number >= min)
+			{
+				return [false, "Det hemliga talet är högre!"];	
+			}
+			else if(number > secret && number < max)
+			{ 
+				return [false, "Det hemliga talet är lägre!"];	
+			}
+			else
+			{
+				return [false, "Talet är utanför intervallet " + min + "-" + max];
+			}
 		}
 		else
 		{
-			return [false, "Talet är utanför intervallet " + min + "-" + max];
-		}
+			throw "Du måste ange talet med siffror!";	
+		}	
+			
+	
+		
 	};
 	
 	// ------------------------------------------------------------------------------

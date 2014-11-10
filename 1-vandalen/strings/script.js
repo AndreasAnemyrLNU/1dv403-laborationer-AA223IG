@@ -7,7 +7,13 @@ window.onload = function(){
 		// Plats för förändring.		
 		// Returnera den konverterade strängen.
 		// Vid fel, kasta ett undantag med ett meddelande till användaren. 
-		var newStr;
+
+		if(str === undefined)
+		{
+			throw "Du glömde att mata in en textsträng!";
+		}
+		
+		var newStr = "";
 		
 		for(var i = 0; i < str.length; i++)
 		{
@@ -15,9 +21,16 @@ window.onload = function(){
 			
 			if (tmp === tmp.toLocaleUpperCase())
 			{
-			newStr[i] = tmp.toLocaleLowerCase();
+				newStr = newStr + tmp.toLocaleLowerCase();
+			}
+			else
+			{
+				newStr = newStr + tmp.toLocaleUpperCase();
 			}
 		}
+	
+	//Replace "A" and "a" with #;
+	newStr = newStr.replace(/a/gi,"#");
 	return newStr;
 	};
 	// ------------------------------------------------------------------------------

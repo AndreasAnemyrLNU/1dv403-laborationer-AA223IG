@@ -21,9 +21,13 @@ window.onload = function(){
 
 		if(number === secret)
 		{
-		return [true, "Grattis du vann! Det hemliga talet var X och du behövde Y gissningar för att hitta det."]
+			return [true, "Grattis du vann! Det hemliga talet var " + secret + " och du behövde Y gissningar för att hitta det."];
 		}
-		// [false, "Det hemliga talet är högre!"]
+		else if(number < secret)
+		{
+			return [false, "Det hemliga talet är högre!"];	
+		}
+
 		// [false, "Det hemliga talet är lägre!"]
 		// [false, "Talet är utanför intervallet 0 - 100"]		
 	};

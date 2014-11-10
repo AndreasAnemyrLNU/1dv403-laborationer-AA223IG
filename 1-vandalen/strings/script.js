@@ -7,6 +7,15 @@ window.onload = function(){
 		// Plats för förändring.		
 		// Returnera den konverterade strängen.
 		// Vid fel, kasta ett undantag med ett meddelande till användaren. 
+		
+		var value;
+		
+		
+		value = str.split(' ').length;
+		
+		console.log(value);
+		
+		return "Dett är ett test!";
 	
 
 

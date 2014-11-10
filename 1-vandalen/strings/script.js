@@ -7,19 +7,18 @@ window.onload = function(){
 		// Plats för förändring.		
 		// Returnera den konverterade strängen.
 		// Vid fel, kasta ett undantag med ett meddelande till användaren. 
+		var newStr;
 		
 		for(var i = 0; i < str.length; i++)
 		{
 			var tmp = (str.charAt(i));
 			
 			if (tmp === tmp.toLocaleUpperCase())
-			
-			str[i] = tmp.toLocaleLowerCase();
-			
+			{
+			newStr[i] = tmp.toLocaleLowerCase();
+			}
 		}
-
-	return str;
-
+	return newStr;
 	};
 	// ------------------------------------------------------------------------------
 

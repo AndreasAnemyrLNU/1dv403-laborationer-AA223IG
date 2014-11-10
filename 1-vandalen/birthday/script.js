@@ -2,16 +2,23 @@
 
 window.onload = function(){
 
-	
-	
 	var birthday = function(date){
-		
 	
+	// yyyy-mm-dd
+	var re = /^(\d{4})([\/-])(\d{1,2})\2(\d{1,2})$/ ; 
+	console.log(re.test(date)); 
 	
 	var nextBirthDay = new Date(date);
-	nextBirthDay.setYear(2014);
+	var now = new Date();
+	nextBirthDay.setYear(now.getFullYear());
+
+	//Differans i millisekinder från årets födelsdag vs nuvarande datum
+	var milliSeconds = nextBirthDay - now;
 	
-	console.log(nextBirthDay.getFullYear());
+	//Konvertera millisekunder till avrundade dagar
+	var days = Math.ceil(milliSeconds / (1000*60*60*24));
+	
+	return days;
 
 	};
 	// ------------------------------------------------------------------------------

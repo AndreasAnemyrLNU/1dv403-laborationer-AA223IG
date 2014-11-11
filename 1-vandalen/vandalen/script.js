@@ -3,22 +3,33 @@
 
 var makePerson = function(persArr){
     
-    //born name
+    var averageAge = function(persArr)
+    {
+            var person;
+            var sum = 0;
+            for(person in persArr)
+            {
+                if(typeof +persArr[person].age === 'number')
+                {
+                    sum = sum + persArr[person].age;
+                }
+                else
+                {
+                    throw "Ålder kan inte tolkas som en tal skrivet med siffror!";
+                }
+            }
+            return Math.round(sum / persArr.length);   
+    };
     
-    
-    var minAge;
-    var maxAge;
-    var averageAge;
-
-    console.log(persArr);
-
-
-	return {
-        	    minAge:     36,
-        	    maxAge:     46,
-        	    averageAge: 40,
-        	    names:      "Johan Leitet, John Häggerud, Mats Loock",
-	        };
+    return {averageAge: averageAge(persArr)};
 
 };
+
+var data = [{name: "John Häggerud", age: 37}, 
+            {name: "Johan Leitet", age: 36}, 
+            {name: "Mats Loock", age: 46}];
+
+var result = makePerson(data);
+
+console.log(result);
 

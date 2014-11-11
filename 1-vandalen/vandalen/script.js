@@ -1,20 +1,17 @@
 "use strict";
 
-var average = function(array, propName){
-    var sum;
-    var item;
-    for(item in array)
-    {
-        sum += item[propName];
-    }
-    return sum / array.Length;
-};
-
 
 var makePerson = function(persArr){
     
-    var minage;
-    minage = average(persArr, "age")
+    //born name
+    
+    
+    var minAge;
+    var maxAge;
+    var averageAge;
+
+    console.log(persArr);
+
 
 	return {
         	    minAge:     36,

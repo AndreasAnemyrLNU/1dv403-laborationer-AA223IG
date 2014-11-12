@@ -1,27 +1,21 @@
 "use strict";
 
-
 var makePerson = function(persArr){
     
-    var averageAge = function(persArr)
-    {
-            var person;
-            var sum = 0;
-            for(person in persArr)
-            {
-                if(typeof +persArr[person].age === 'number')
-                {
-                    sum = sum + persArr[person].age;
-                }
-                else
-                {
-                    throw "Ålder kan inte tolkas som en tal skrivet med siffror!";
-                }
-            }
-            return Math.round(sum / persArr.length);   
-    };
+    var averageAge;
+    var maxAge;
+    var minAge;
+    var names;
+ 
     
-    return {averageAge: averageAge(persArr)};
+     
+    
+    
+    
+    return {
+        averageAge: averageAge(persArr),
+        
+    };
 
 };
 

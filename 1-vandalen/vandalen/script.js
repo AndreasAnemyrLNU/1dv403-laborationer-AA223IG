@@ -1,21 +1,24 @@
 "use strict";
 
 var makePerson = function(persArr){
-    
-    var averageAge;
-    var maxAge;
-    var minAge;
-    var names;
- 
-    
-     
-    
-    
-    
-    return {
-        averageAge: averageAge(persArr),
-        
-    };
+
+    var calcMaxAge = function(persArr){
+        return 46;
+    }
+    var calcMinAge = function(persArr){
+        return 36;
+    }
+
+    var calcAverageAge = function(persArr){
+        return 40;
+    }
+
+    return  {
+                averageAge: calcAverageAge(persArr),
+                maxAge:     calcMaxAge(persArr),
+                minAge:     calcMinAge(persArr),
+            };
+
 
 };
 

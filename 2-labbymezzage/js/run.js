@@ -10,4 +10,4 @@ var run = {
 };
 
 
-run.init();
+window.onload = run.init;

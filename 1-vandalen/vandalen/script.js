@@ -13,12 +13,14 @@ var makePerson = function(persArr){
         return 40;
     };
     
+    //fixa sorteringen!
     var names = function(persArr){
         result = [];
         persArr.forEach(function(item){
             result.push(item.name);
         });
-    return result
+    result = result.sort();
+    return result;
     };
 
     return  {

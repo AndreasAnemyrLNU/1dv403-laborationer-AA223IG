@@ -3,10 +3,21 @@
 var makePerson = function(persArr){
 
     var calcMaxAge = function(persArr){
-        return 46;
+        
+    var arrayOfAges = [];    
+    var MaxAge;  
+        
+        persArr.forEach(function(item){
+            arrayOfAges.push(item.age);
+        });
+        
+    arrayOfAges.sort();
+    MaxAge = arrayOfAges[arrayOfAges.length -1];
+    return MaxAge;   
+        
     };
     var calcMinAge = function(persArr){
-        return 36;
+        return 360;
     };
 
     var calcAverageAge = function(persArr){

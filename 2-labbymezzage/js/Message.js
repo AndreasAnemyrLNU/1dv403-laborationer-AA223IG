@@ -1,5 +1,7 @@
 "use strict";
 
+//Start - Message constructor***************************\\
+
 function Message(message, date){
     
     this.getText = function(){
@@ -11,6 +13,10 @@ function Message(message, date){
     };
     
 }
+
+//*******************************Message.prototype - End\\
+//******************************************************\\
+//Start - Message.prototype*****************************\\
 
 Message.prototype.toString = function(){
     return this.getText()+" ("+this.getDate()+")";
@@ -35,3 +41,5 @@ Message.prototype.setDate = function(){
 Message.prototype.HTMLText = function(){
     alert("getHTMLText in Message not implemented!");
 };
+
+//***********************Start - Message.prototype - End\\

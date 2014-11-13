@@ -10,16 +10,17 @@ var makePerson = function(persArr){
     };
 
     var calcAverageAge = function(persArr){
-        return 40;
+        
     };
     
-    //fixa sorteringen!
     var names = function(persArr){
         result = [];
         persArr.forEach(function(item){
             result.push(item.name);
         });
-    result = result.sort();
+    //stackoverflow.com/questions/14528998/is-there-any-javascript-library-with-implementations-of-sort-methods-for-alphabe
+    result = result.sort(function(a,b){return a.localeCompare(b)});
+    result = result.join(", ");
     return result;
     };
 

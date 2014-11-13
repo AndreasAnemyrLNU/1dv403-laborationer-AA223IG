@@ -1,27 +1,52 @@
 "use strict";
 
 var makePerson = function(persArr){
-//*************************************************
+
+//START - CHECK FOR ERRORS OF OBJECTARRAY persArr**\\
+//*************************************************\\
+//*************************************************\\
+//START test of obj.age****************************\\
+persArr.forEach(function(item, index, array){
+    try
+    {
+        if(!(typeof item.age === 'number' && item.age % 1 === 0))
+        {
+            throw "Error! obj.age is not of type int";
+        }
+    }
+    catch(err)
+    {
+        console.log(err);
+    }
+});
+//*****************************END test of obj.age\\
+//************************************************\\
+//START test of obj.name**************************\\
+persArr.forEach(function(item, index, array){
+    try
+    {
+        if(typeof item.name !== 'string')
+        {
+            throw "Error! obj.name is not of type string";
+        }
+    }
+    catch(err)
+    {
+        console.log(err);
+    }
+});
+//*****************************END test of obj.name\\
+//*************************************************\\
+//END - CHECK FOR ERRORS OF OBJECTARRAY persArr****\\
+
+
         var calcMaxAge = function(persArr){
         
         var arrayOfAges = [];    
         var maxAge;  
         
             persArr.forEach(function(item){
-                try
-                {
-                    if(typeof item.age === 'number' && item.age % 1 === 0)
-                    {
                         arrayOfAges.push(item.age);
-                    }
-                    else{
-                        throw "Fel! obj.age av annan typ än int";
-                    }
-                }
-                catch(err)
-                {
-                    console.log(err);
-                }
             });
             
         arrayOfAges.sort();
@@ -81,7 +106,7 @@ var makePerson = function(persArr){
 };
 //*************************************************
 //*************************************************
-var data = [{name: "John Häggerud", age: 37.6}, 
+var data = [{name: "John Häggerud", age: 37}, 
             {name: "Johan Leitet", age: 36}, 
             {name: "Mats Loock", age: 46}];
 

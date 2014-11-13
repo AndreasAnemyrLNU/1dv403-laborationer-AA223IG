@@ -4,19 +4,28 @@ var makePerson = function(persArr){
 
     var calcMaxAge = function(persArr){
         return 46;
-    }
+    };
     var calcMinAge = function(persArr){
         return 36;
-    }
+    };
 
     var calcAverageAge = function(persArr){
         return 40;
-    }
+    };
+    
+    var names = function(persArr){
+        result = [];
+        persArr.forEach(function(item){
+            result.push(item.name);
+        });
+    return result
+    };
 
     return  {
                 averageAge: calcAverageAge(persArr),
                 maxAge:     calcMaxAge(persArr),
                 minAge:     calcMinAge(persArr),
+                names:      names(persArr)
             };
 
 

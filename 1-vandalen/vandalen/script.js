@@ -103,12 +103,30 @@ persArr.forEach(function(item, index, array){
                 minAge:     calcMinAge(persArr),
                 names:      names(persArr)
             };
+            
+            
 };
 //*************************************************
 //*************************************************
-var data = [{name: "John Häggerud", age: 37}, 
-            {name: "Johan Leitet", age: 36}, 
-            {name: "Mats Loock", age: 46}];
+
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+}
+
+// Create Obj-array with constructor Person. Test!
+var data =  [   
+                new Person("John Häggerud",37),
+                new Person("Johan Leitet",36),
+                new Person("Mats Loock",146)
+            ];
+
+console.log(data);
+
+
+//var data = [{name: "John Häggerud", age: 37}, 
+//            {name: "Johan Leitet", age: 36}, 
+//            {name: "Mats Loock", age: 46}];
 
 var result = makePerson(data);
 

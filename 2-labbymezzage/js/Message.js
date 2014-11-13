@@ -15,3 +15,23 @@ function Message(message, date){
 Message.prototype.toString = function(){
     return this.getText()+" ("+this.getDate()+")";
 };
+
+Message.prototype.getText = function(){
+    alert("getText in Message not implemented!");
+};
+
+Message.prototype.setText = function(){
+    alert("setText in Message not implemented!");
+};
+
+Message.prototype.getDate = function(){
+    alert("getDate in Message not implemented!");
+};
+
+Message.prototype.setDate = function(){
+    alert("setDate in Message not implemented!");
+};
+
+Message.prototype.HTMLText = function(){
+    alert("getHTMLText in Message not implemented!");
+};

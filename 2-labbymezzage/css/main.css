@@ -1,3 +1,5 @@
+/*Optimized for 960px width*/
+
 /*ColorScheme*/
 
 
@@ -50,5 +52,23 @@ table {
 	border-spacing: 0;
 }
 
-/*END OF MEYER'S RESET*
+/*END OF MEYER'S RESET*/
+
+body {
+    background-color: black;
+}
+
+#mainMessageArea {
+    background-color: green;
+    height: 10em;
+    margin: auto;
+    width: 30em;
+}
+
+#messageWrapper {
+    background-color: white;
+    height: 10em;
+    margin: auto;
+    width: 60em;
+}
 

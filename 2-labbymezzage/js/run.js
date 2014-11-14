@@ -3,7 +3,9 @@
 
 var run = {
     
-    init:   function(){
+    messages:   [],
+    
+    init:       function(){
         
         var mess = new Message("Testmeddelande", new Date());
         alert(mess);

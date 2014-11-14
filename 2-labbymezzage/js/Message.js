@@ -14,7 +14,7 @@ function Message(message, date){
     
 }
 
-//*******************************Message.prototype - End\\
+//*****************************Message constructor - End\\
 //******************************************************\\
 //Start - Message.prototype*****************************\\
 

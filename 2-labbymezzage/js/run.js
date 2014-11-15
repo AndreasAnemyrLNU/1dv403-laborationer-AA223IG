@@ -3,16 +3,19 @@
 
 var run = {
     
-    messages:   [],
-    
     init:       function(){
         
-      
-    var submit = document.getElementById("submit");
-    
-    submit.addEventListener("click", function(){alert("Funkar?")}, false);  
-    
+    var messages = [];
         
+    //Skapar eventlyssnare för submitknappen.... 
+    var submit = document.getElementById("submit");
+    submit.addEventListener("click", createMessage, false);  
+    
+    function createMessage(){
+        messages.push(new Message( document.getElementById("messageInputArea").value , new Date()));
+        console.log(messages[0].toString);
+    }
+    
         
         
         //var mess = new Message("Testmeddelande", new Date());

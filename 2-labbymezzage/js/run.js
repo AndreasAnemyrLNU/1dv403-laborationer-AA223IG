@@ -7,8 +7,11 @@ var run = {
     
     init:       function(){
         
-        
-        
+      
+    var submit = document.getElementById("submit");
+    
+    submit.addEventListener("click", function(){alert("Funkar?")}, false);  
+    
         
         
         

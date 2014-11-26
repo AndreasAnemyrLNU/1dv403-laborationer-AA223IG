@@ -6,7 +6,11 @@ window.onload = function(){
 	
 	// yyyy-mm-dd
 	var re = /^(\d{4})([\/-])(\d{1,2})\2(\d{1,2})$/ ; 
-	
+	/*
+	if(isNaN(Date.parse(date))){
+		throw new Error("Inte ett datum");
+	}
+	*/
 	if(re.test(date))
 	{
 		var nextBirthDay = new Date(date);
@@ -15,16 +19,24 @@ window.onload = function(){
 		nextBirthDay.setYear(now.getFullYear());
 		
 		//if present birthday passed current year
-		if(nextBirthDay < now)
+		if(nextBirthDay.getMonth() > now.getMonth() || ( nextBirthDay.getMonth() == now.getMonth() && nextBirthDay.getDate() < now.getDate() ) )
 		{
 			nextBirthDay.setYear(now.getFullYear() + 1);
 		}
-
+		
+		if(nextBirthDay.getMonth() == now.getMonth() && nextBirthDay.getDate() == now.getDate()){
+			//Grattis
+		}
+		
+		if(nextBirthDay.getMonth() == now.getMonth() && nextBirthDay.getDate() == ( now.getDate() + 1) ){
+			//Grattis imorgon
+		}
+		
 		//Differans i millisekinder från årets födelsdag vs nuvarande datum
 		var milliSeconds = nextBirthDay - now;
 	
 		//Konvertera millisekunder till avrundade dagar
-		var days = Math.ceil(milliSeconds / (1000*60*60*24));
+		var days = Math.floor(milliSeconds / (1000*60*60*24));
 	}
 	else
 	{

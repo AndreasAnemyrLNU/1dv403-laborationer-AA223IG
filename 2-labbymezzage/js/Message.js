@@ -12,6 +12,16 @@ function Message(message, date){
         message = _text;
     };
     
+    this.getDate = function(){
+        return date;
+    };
+    
+    this.setDate = function (_date){
+        message = _date;
+    };
+    
+
+    
 }
 
 //*****************************Message constructor - End\\
@@ -19,7 +29,7 @@ function Message(message, date){
 //Start - Message.prototype*****************************\\
 
 Message.prototype.toString = function(){
-    return this.getText()+" ("+this.getDate()+")";
+    return this.getText();
 };
 
 Message.prototype.getText = function(){

@@ -29,23 +29,7 @@ function Message(message, date){
 //Start - Message.prototype*****************************\\
 
 Message.prototype.toString = function(){
-    return this.getText();
-};
-
-Message.prototype.getText = function(){
-    alert("getText in Message not implemented!");
-};
-
-Message.prototype.setText = function(){
-    alert("setText in Message not implemented!");
-};
-
-Message.prototype.getDate = function(){
-    alert("getDate in Message not implemented!");
-};
-
-Message.prototype.setDate = function(){
-    alert("setDate in Message not implemented!");
+    return this.getText()+" ("+this.getDate()+")";
 };
 
 Message.prototype.HTMLText = function(){

@@ -3,31 +3,137 @@
     <head>
         <link rel="stylesheet" href="css/main.css" type="text/css" />
         <meta charset="utf-8">
+        <title>Labby Mezzage</title>
     </head>
     <body>
+<!--******************************************************************************************-->  
+<!--******************************************************************************************-->
+<!--         <div class="z fixedRight fixedBottom">
+            <p>Kom ihåg!</p>
+            <p>Klasserna .boxForm och .box maxyta 20em x 10em</p>
+            <p>main.css Layout görs för 60em (960px). Funderar på att göra responsivt</p>
+            <p>js skicka genom att trycka på enter. Shift Enter radbrytning</p>
+            <p>Kom ihåg att man kan skicka referenser med this. Då kan man enkelt få tag i föräldraelement när man jobbar med dom. Användes för raderandet i den här appliakationen</p>
+            <p>Idag 28/11 har jag kopplat ett event med addEventListener med en anonym funktion som returnerar en annan funktion. Jag skickar med ett message-objekt som argument till den funktionen som verkligen kör koden. Anledningen till att jag gjorde detta var att koden annars körde fel kontext....</p>
+            <p>Jag har lagt preventDefault() i toppen. Är det så att det måste göras?</p>
+        </div>
+        
+        <div class="z">
+            <p>TidsLog!</p>
+            <p>08:00-|| Layout och kommentarer när man utvecklar. Lägger dessa som position fixed med olika klasser</p>
+        </div>
+
+        <div class="z fixedBottom">
+            <p>Misstag!</p>
+            <p>Kom ihåg att om inte något händer när man satt ett event kan det vara så att det är kopplat på fel objekt. Sökvägen till objektet måste stämma för att det ska triggas</p>
+            <p>e.preventDefault hindrar en reload av en submitknapp. Ett måste för att javascriptvariablerna ska finnas kvar till nästa event triggas...</>
+        </div> -->
+<!--******************************************************************************************--> 
+<!--******************************************************************************************--> 
+        
         <div id="Wrapper">      
 
                 <h1>Labby Mezzage</h1>
-                
+
                 <div class="formContainer">
+                    
+
+
                     <div class="boxForm">
+
+                        <div id="msgsDiv"></div>
+
                         <form id="messageForm">
-                            <textarea></textarea>
-                            <input id="submit" type="submit" value="Submit"/>
+                            <textarea>Här kan du skriva ett meddelande!</textarea>
+                            <input id="submit" type="submit" value="Skicka Meddelande"/>
                         </form>
+
+                        <p id="nrOfMsgs">Antal Meddelande: 0</p>
+                
                     </div>
                 </div>
-                
+
+<!--
                 <div class="messageBoard">
+                    
                     <div class="messageContainer">
+                        
                         <div class="box">
-                            <article id="1" class="message">
+                            <article class="message">
                                 <a class="message block" href="#">Lorem Ipsum Lorem Ipsum....Lorem Ipsum Lorem Ipsum....</a>
                                 <a href="#">Tidsstämpel 2 </a><a href="#">Radera</a>
                             </article>
                         </div>
+                        
+                        <div class="box">
+                            <article class="message">
+                                <a class="message block" href="#">Lorem Ipsum Lorem Ipsum....Lorem Ipsum Lorem Ipsum....</a>
+                                <a href="#">Tidsstämpel 2 </a><a href="#">Radera</a>
+                            </article>
+                        </div>
+                        
+                        <div class="box">
+                            <article class="message">
+                                <a class="message block" href="#">Lorem Ipsum Lorem Ipsum....Lorem Ipsum Lorem Ipsum....</a>
+                                <a href="#">Tidsstämpel 2 </a><a href="#">Radera</a>
+                            </article>
+                        </div>
+                        
                     </div>
-                </div>
+                    
+                    <div class="messageContainer">
+                        
+                        <div class="box">
+                            <article class="message">
+                                <a class="message block" href="#">Lorem Ipsum Lorem Ipsum....Lorem Ipsum Lorem Ipsum....</a>
+                                <a href="#">Tidsstämpel 2 </a><a href="#">Radera</a>
+                            </article>
+                        </div>
+                        
+                        <div class="box">
+                            <article class="message">
+                                <a class="message block" href="#">Lorem Ipsum Lorem Ipsum....Lorem Ipsum Lorem Ipsum....</a>
+                                <a href="#">Tidsstämpel 2 </a><a href="#">Radera</a>
+                            </article>
+                        </div>
+                        
+                        <div class="box">
+                            <article class="message">
+                                <a class="message block" href="#">Lorem Ipsum Lorem Ipsum....Lorem Ipsum Lorem Ipsum....</a>
+                                <a href="#">Tidsstämpel 2 </a><a href="#">Radera</a>
+                            </article>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="messageContainer">
+                        
+                        <div class="box">
+                            <article class="message">
+                                <a class="message block" href="#">Lorem Ipsum Lorem Ipsum....Lorem Ipsum Lorem Ipsum....</a>
+                                <a href="#">Tidsstämpel 2 </a><a href="#">Radera</a>
+                            </article>
+                        </div>
+                        
+                        <div class="box">
+                            <article class="message">
+                                <a class="message block" href="#">Lorem Ipsum Lorem Ipsum....Lorem Ipsum Lorem Ipsum....</a>
+                                <a href="#">Tidsstämpel 2 </a><a href="#">Radera</a>
+                            </article>
+                        </div>
+                        
+                        <div class="box">
+                            <article class="message">
+                                <a class="message block" href="#">Lorem Ipsum Lorem Ipsum....Lorem Ipsum Lorem Ipsum....</a>
+                                <a href="#">Tidsstämpel 2 </a><a href="#">Radera</a>
+                            </article>
+                        </div>
+                        
+                    </div>
+
+                </div>-->
+
+                
 
 
         </div>

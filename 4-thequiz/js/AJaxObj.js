@@ -1,20 +1,24 @@
 function AjaxObj(method, url){
 
+	var that = this;
+	
+	this.data = "";
+	
 	this.xhr = new XMLHttpRequest();
 
 	this.xhr.onreadystatechange = function(){
-
-			console.log(this.xhr.responseText);
-
+		
+		if(that.xhr.readyState === 4)
+		{
+			that.data = JSON.parse(that.xhr.responseText);		
+		}
 	}
 
 	this.method = function(){
-		alert("method: " + method)
 		return method;
 	};
 
 	this.url = function(){
-		alert("url: " + url)
 		return url;
 	};
 
@@ -26,8 +30,6 @@ function AjaxObj(method, url){
 	this.send = function(){
 		this.xhr.send(null);
 	}
-
-
 
 }
 

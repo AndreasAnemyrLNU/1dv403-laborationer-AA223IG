@@ -4,23 +4,34 @@
 
 var run = {
 
-	answer: [],
-
-	baseUrl: "http://vhost3.lnu.se:20080",
+	url: "http://vhost3.lnu.se:20080/question/1",
 
 	questionNr: 1,
 
 	init: function(){
-			this.userAnswer();
-
-
-			var ajaxFetchQuestion = new AjaxObj("GET", this.baseUrl + "/question/" + this.questionNr)
-			ajaxFetchQuestion.open();
-			ajaxFetchQuestion.send();
+				
+				this.nextQuestion();
 
 	},
 
 	
+	nextQuestion: function(){
+
+		var ajaxQuest = new AjaxObj("GET", this.url)
+		ajaxQuest.open();
+		ajaxQuest.send();
+
+		setTimeout(function(){
+			document.querySelector("#question").innerHTML = ajaxQuest.data.question;	
+
+			this.url = ajaxQuest.data.nextURL;
+
+			alert(this.url);
+
+		},2000);
+	},
+
+
 
 	userAnswer: function(){
 		var answer = document.querySelector("#answer");

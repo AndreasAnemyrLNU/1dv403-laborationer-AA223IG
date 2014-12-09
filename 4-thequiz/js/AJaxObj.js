@@ -22,15 +22,13 @@ function AjaxObj(method, url){
 		return url;
 	};
 
-
 	this.open = function(){
 		this.xhr.open(this.method(), this.url())
 	};
 
-	this.send = function(){
-		this.xhr.send(null);
+	this.send = function(data){	
+		this.xhr.send(data);
 	}
-
 }
 
 

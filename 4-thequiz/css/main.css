@@ -49,27 +49,56 @@ table {
 
 /*END OF RESET*/
 
+body{
+	font-family: sans-serif;
+}
 
+fieldset{
+	border: none;
+	margin: 1em 0 0 0;
+}
+
+h1{
+	letter-spacing: .5em;
+	padding: .5em;
+	text-align: center;
+	text-shadow: green 0 0 1em;
+}
+h4{
+	clear: both;
+	padding: .5em;
+	text-align: center;
+}
 
 input[type="submit"]{
 	float: right;
-	margin: 2em 35% 0 0;
+	margin: 0 35% 0 0;
 	width: 30%;
 }
 
 input[type="text"]{
 	height: 2em;
+	text-align: center;
 	width: 98%;
 }
 
 legend{
-	margin :auto;
+	font-size: 1.2em;
+	font-weight: 900;
+	margin : 0em auto;
+}
+
+li{
+	text-align: left;
+	margin-left: .5em;
 }
 
 #content{
-	background-color: orange;
+	background-color: white;
+	border-radius: 2em;
 	box-shadow: black 0 0 .5em;
-	height: 20em;
+	min-height: 16em;
 	margin: auto;
+	overflow: auto;
 	width: 20em;
 }

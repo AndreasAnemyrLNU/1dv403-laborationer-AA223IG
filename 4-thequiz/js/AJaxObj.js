@@ -2,7 +2,7 @@ function AjaxObj(method, url){
 
 	var that = this;
 	
-	this.data = "";
+	this.data = "nothing here yet!";
 	
 	this.xhr = new XMLHttpRequest();
 

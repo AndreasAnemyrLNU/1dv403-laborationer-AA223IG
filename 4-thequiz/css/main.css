@@ -63,10 +63,12 @@ h1{
 	padding: .5em;
 	text-align: center;
 	text-shadow: green 0 0 1em;
+	transition-duration: 5s;
+	transform: scale(1);
 }
 h4{
 	clear: both;
-	padding: .5em;
+	padding: 1em;
 	text-align: center;
 }
 
@@ -85,11 +87,13 @@ input[type="text"]{
 legend{
 	font-size: 1.2em;
 	font-weight: 900;
-	margin : 0em auto;
+	letter-spacing: .1em;
+	margin : 1em auto;
 }
 
 li{
 	text-align: left;
+	letter-spacing: .1em;
 	margin-left: .5em;
 }
 
@@ -98,7 +102,28 @@ li{
 	border-radius: 2em;
 	box-shadow: black 0 0 .5em;
 	min-height: 16em;
-	margin: auto;
+	margin: 2em auto;
 	overflow: auto;
 	width: 20em;
 }
+
+.ajaxLoader{
+	background-image: url("ajax-loader.gif");
+	background-size: contain;
+	border: none;
+}
+
+.wrong{
+	background-color: #F07E7E;
+}
+
+.right{
+	background-color: #8DD06D;	
+}
+
+.h1_anim{
+	text-shadow: yellow 0 0 1em;
+	transform: scale(.95);
+}
+
+

@@ -92,7 +92,7 @@ textarea{
     opacity: .6;
     padding: 1em;
     resize: none;
-    width: 21em;
+    width: 80%;
 }
 textarea:focus, textarea:hover{
     opacity: .8;

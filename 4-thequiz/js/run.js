@@ -114,6 +114,13 @@ var run = {
 			}
 			else
 			{
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+				//E
+				alert("Fel svar!")
+=======
+>>>>>>> Stashed changes
 				document.querySelector("#answer").classList.add("ajaxLoader");
 				document.querySelector("#answer").classList.add("wrong");
 				
@@ -122,6 +129,10 @@ var run = {
 					document.querySelector("#answer").value = "";
 				}, 500);
 				
+<<<<<<< Updated upstream
+=======
+>>>>>>> FETCH_HEAD
+>>>>>>> Stashed changes
 			}
 		},1000);
 	},

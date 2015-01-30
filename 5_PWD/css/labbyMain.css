@@ -1,0 +1,262 @@
+/*Optimized for 960px width*/
+
+/*ColorScheme*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*END OF MEYER'S RESET*/
+
+body{
+    //background-color: black;
+    font-family: georgia, serif;
+}
+
+form{
+    float: left;
+}
+h1{
+    color: white;
+    font-family: georgia;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1em;
+    padding: .8em;
+    text-align: center;
+    text-shadow: white .1em .1em 1em;
+}
+h4{
+    color: #DAA520;
+    text-align: center;
+}
+input[type="submit"]{
+    box-shadow: red 0 0 .2em;
+    clear: both;
+    float: right;
+    margin: 3em 6em;
+    width: 50%;
+}
+textarea{
+    border-radius: 1em;
+    float: left;
+    height: 10em;
+    overflow:auto;
+    outline: none;
+    opacity: .6;
+    padding: 1em;
+    resize: none;
+    width: 80%;
+}
+textarea:focus, textarea:hover{
+    opacity: .8;
+}
+#nrOfMsgs{
+    border-radius: 50%;
+    box-shadow: white 0 0 2em;
+    color: white;
+    display: block;
+    float: left;
+    height: 1em;
+    left: 2.3em;
+    opacity: .8;
+    position: relative;
+    padding: 1em;
+    top: 7em;
+    text-shadow: white 0 0 .01250em;
+
+}
+#Wrapper{
+    //background-color: black;
+    display: block;
+    margin: auto;
+    overflow: auto;
+    padding-bottom: 4em;
+    
+    width: 450px;
+}
+/* height 10em, width 20em */
+.box{
+    /*border: 0.0625em solid black*/ ;
+    border-radius: 1em;
+    background-color: yellow;
+    box-shadow: white 0 0 1em;
+    float: left;
+    height: 8em;
+    padding: 1em;
+    transform: scale(1);
+    transition-duration: 2s;
+    margin: 1em;
+    width: 16em;
+}
+.box:hover{
+    box-shadow: red 0 0 .1250;
+    transform: scale(1.05, 1.05);
+    transition-duration: .7s;
+
+}
+.boxForm{
+
+background: #d2ff52; /* Old browsers */
+background: -moz-linear-gradient(top,  #d2ff52 0%, #91e842 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d2ff52), color-stop(100%,#91e842)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #d2ff52 0%,#91e842 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #d2ff52 0%,#91e842 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
+
+
+    border-radius: 1em;
+
+    box-shadow: white 0 0 1em;
+    float: left;
+    height: auto;
+    padding: 1em;
+    margin: 1em 0 3em 0;
+    width: 16em;
+}
+.fixedBottom{
+    bottom: 0;
+}
+.fixedRight{
+    right: 0;
+}
+.imgDelete{
+    background-color: black;
+    background-image: url("delete.gif");
+    background-size: contain;
+    clear: both;
+    float: right;
+    height: 1.5em;
+    margin-top: .5em;
+    width: 1.5em;    
+}
+.imgTime{
+    background-color: black;
+    background-image: url("clock.png");
+    background-size: contain;
+    clear: both;
+    float: right;
+    height: 1.5em;
+    margin-top: .5em;
+    width: 1.5em;    
+}
+.listBox{
+    background-color: black;
+    border-radius: 1em;
+    box-shadow: black 0 0 .5000em;
+    color: white;
+    font-family: arial, sans-serif;
+    font-size: .75em;
+    height: auto;
+    margin: 1em 0;
+    overflow: auto;
+    opacity: .8;
+    padding: 1em;
+    transition-duration: 1.5s;
+
+    word-wrap: break-word;         /* All browsers since IE 5.5+ */
+    overflow-wrap: break-word;
+
+}
+.listBox:hover{
+    box-shadow: yellow 0 0 5em;
+    opacity: .9;
+    transform: scale(1.05);
+    transition-duration: 1.5s;
+}
+.messageBoard{
+    display: block;
+    clear: both;
+}
+.formContainer{
+    margin: auto;
+    width: 20em;
+}
+.messageContainer{
+    background-color: black;
+    border-radius: 1em;
+    box-shadow: white 0 0 1em;
+    clear: both;
+    overflow: auto;
+    transition-duration: 1.5s;
+}
+.messageContainer:hover{
+    box-shadow: white 0 0 0;
+    transition-duration: 1.5s;
+}
+.pDate{
+    float: left;
+    font-family: monospace;
+    padding: 1em;
+    position: relative;
+    top: 5.5em;
+}
+.MessageText{
+    float: left;
+    font-family: monospace;
+}
+/*Comments for developer*/
+.z{
+    position: absolute;
+    width: 10em;
+}
+.z p{
+    background-color: black;
+    border: .1250em solid black;
+    border-radius: .5em;
+    color: yellow;
+    border-bottom: none;
+    margin: .1250em;
+    padding: .1250em;
+}
+
+
+
